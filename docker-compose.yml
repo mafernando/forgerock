@@ -1,0 +1,13 @@
+---
+version: '2'
+services:
+  common:
+    build: "."
+    environment:
+      APP_ENV: development
+  app:
+    extends:
+      service: common
+    ports:
+    - 80:80
+    command: "/app/scripts/start.sh"
