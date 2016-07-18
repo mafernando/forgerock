@@ -7,5 +7,8 @@ set -e
 # Start apache
 /usr/local/apache2/bin/apachectl -k start
 
+# Start apache
+/app/tomcat/bin/startup.sh
+
 # Keep container up with ping
 ping -i 60 www.google.com
