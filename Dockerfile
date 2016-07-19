@@ -51,4 +51,9 @@ RUN /bin/bash -c "tar -zxvf apache-tomcat-7.0.70.tar.gz"
 RUN /bin/bash -c "mv apache-tomcat-7.0.70 tomcat"
 RUN /bin/bash -c "chmod +x /app/tomcat/bin/*.sh"
 
+# Install OpenAM
+WORKDIR /app
+RUN /bin/bash -c "wget http://download.forgerock.org/downloads/openam/OpenAM-14.0.0-SNAPSHOT_20160716.war"
+RUN /bin/bash -c "mv /app/OpenAM-14.0.0-SNAPSHOT_20160716.war /app/tomcat/webapps/openam.war"
+
 EXPOSE 8000 8080 22
