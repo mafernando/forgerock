@@ -56,4 +56,4 @@ WORKDIR /app
 RUN /bin/bash -c "wget http://download.forgerock.org/downloads/openam/OpenAM-14.0.0-SNAPSHOT_20160716.war"
 RUN /bin/bash -c "mv /app/OpenAM-14.0.0-SNAPSHOT_20160716.war /app/tomcat/webapps/openam.war"
 
-EXPOSE 8000 8080 22
+EXPOSE 8000 8080 8443 22
