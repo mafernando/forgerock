@@ -22,5 +22,8 @@ WORKDIR httpd-2.2.31
 RUN /bin/bash -c "./configure --prefix=/usr/local/apache2"
 RUN /bin/bash -c "make"
 RUN /bin/bash -c "make install"
+RUN /bin/bash -c "sed -i 's/Listen 80/Listen 8000/g' /usr/local/apache2/conf/httpd.conf"
 
-EXPOSE 22
+WORKDIR /app
+
+EXPOSE 8000 22

@@ -9,5 +9,6 @@ services:
     extends:
       service: common
     ports:
-    - 80:80
+    - 22:22
+    - 8000:8000
     command: "/app/scripts/start.sh"
