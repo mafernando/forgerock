@@ -24,6 +24,11 @@ RUN /bin/bash -c "make"
 RUN /bin/bash -c "make install"
 RUN /bin/bash -c "sed -i 's/Listen 80/Listen 8000/g' /usr/local/apache2/conf/httpd.conf"
 
+# Install OpenAM Web Agent
+# WORKDIR /app
+# RUN /bin/bash -c "wget http://download.forgerock.org/downloads/openam/webagents/nightly/Linux/Apache_v22_Linux_64bit_5.0.0-SNAPSHOT.zip"
+# RUN /bin/bash -c "unzip Apache_v22_Linux_64bit_5.0.0-SNAPSHOT.zip"
+
 WORKDIR /app
 
 EXPOSE 8000 22
